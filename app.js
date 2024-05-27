@@ -66,8 +66,16 @@ bot.on('chatMessageCreate', async (user, message) => {
     }
   }
 //send a custom message by saying someone user name or saying a specific word (can be done multiple time, consult Examples.js)
-  if (message.startsWith(`Selam`)) {
-   bot.message.send(`Selam ${user.username} `);
+  if (message.startsWith(`Hi`)) {
+   bot.message.send(`hii wtspp ${user.username} `);
+  };
+  //send a custom message by saying someone user name or saying a specific word (can be done multiple time, consult Examples.js)
+  if (message.startsWith(`Bot`)) {
+   bot.message.send(`Hi ${user.username} Bot owner is @Atekinz`);
+  };
+  //send a custom message by saying someone user name or saying a specific word (can be done multiple time, consult Examples.js)
+  if (message.startsWith(`Emote`)) {
+   bot.message.send(`Emote 1-89 ${user.username} `);
   };
 //get the bot uptime by saying '${prefix}uptime'
   if (message.startsWith(`${prefix}uptime`)) {
@@ -80,6 +88,183 @@ bot.on('chatMessageCreate', async (user, message) => {
   }
   // "personal emote command" works by saying '${prefix}emote name' you can add more emotes, consult emotes.json to get the emotes id
   const emotes = {
+    "angry": "emoji-angry",
+    "1": "emoji-angry",
+    "bow": "emote-bow",
+    "2": "emote-bow",
+    "casual": "idle-dance-casual",
+    "3": "idle-dance-casual",
+    "celebrate": "emoji-celebrate",
+    "4": "emoji-celebrate",
+    "charging": "emote-charging",
+    "5": "emote-charging",
+    "confused": "emote-confused",
+    "6": "emote-confused",
+    "cursing": "emoji-cursing",
+    "7": "emoji-cursing",
+    "curtsy": "emote-curtsy",
+    "8": "emote-curtsy",
+    "cutey": "emote-cutey",
+    "9": "emote-cutey",
+    "dotheworm": "emote-snake",
+    "10": "emote-snake",
+    "emotecute": "emote-cute",
+    "11": "emote-cute",
+    "energyball": "emote-energyball",
+    "12": "emote-energyball",
+    "enthused": "idle-enthusiastic",
+    "13": "idle-enthusiastic",
+    "fashion": "emote-fashionista",
+    "14": "emote-fashionista",
+    "flex": "emoji-flex",
+    "15": "emoji-flex",
+    "float": "emote-float",
+    "16": "emote-float",
+    "frog": "emote-frog",
+    "17": "emote-frog",
+    "gagging": "emoji-gagging",
+    "18": "emoji-gagging",
+    "gravity": "emote-gravity",
+    "19": "emote-gravity",
+    "greedy": "emote-greedy",
+    "20": "emote-greedy",
+    "hello": "emote-hello",
+    "21": "emote-hello",
+    "hot": "emote-hot",
+    "22": "emote-hot",
+    "icecream": "dance-icecream",
+    "23": "dance-icecream",
+    "kiss": "emote-kiss",
+    "24": "emote-kiss",
+    "kpop": "dance-blackpink",
+    "25": "dance-blackpink",
+    "laugh": "emote-laughing",
+    "26": "emote-laughing",
+    "lust": "emote-lust",
+    "27": "emote-lust",
+    "macarena": "dance-macarena",
+    "28": "dance-macarena",
+    "maniac": "emote-maniac",
+    "29": "emote-maniac",
+    "model": "emote-model",
+    "30": "emote-model",
+    "no": "emote-no",
+    "31": "emote-no",
+    "pose1": "emote-pose1",
+    "32": "emote-pose1",
+    "pose3": "emote-pose3",
+    "33": "emote-pose3",
+    "pose5": "emote-pose5",
+    "34": "emote-pose5",
+    "35": "emote-pose7",
+    "pose8": "emote-pose8",
+    "36": "emote-pose8",
+    "punk": "emote-punkguitar",
+    "37": "emote-punkguitar",
+    "russian": "dance-russian",
+    "38": "dance-russian",
+    "sad": "emote-sad",
+    "39": "emote-sad",
+    "sayso": "idle-dance-tiktok4",
+    "40": "idle-dance-tiktok4",
+    "shopping": "dance-shoppingcart",
+    "41": "dance-shoppingcart",
+    "shy": "emote-shy",
+    "42": "emote-shy",
+    "sit": "idle-loop-sitfloor",
+    "43": "idle-loop-sitfloor",
+    "snowangel": "emote-snowangel",
+    "44": "emote-snowangel",
+    "snowball": "emote-snowball",
+    "45": "emote-snowball",
+    "superpose": "emote-superpose",
+    "46": "emote-superpose",
+    "telekinesis": "emote-telekinesis",
+    "47": "emote-telekinesis",
+    "teleport": "emote-teleporting",
+    "48": "emote-teleporting",
+    "thumbs": "emoji-thumbsup",
+    "49": "emoji-thumbsup",
+    "tired": "emote-tired",
+    "50": "emote-tired",
+    "uwu": "idle-uwu",
+    "51": "idle-uwu",
+    "wave": "emote-wave",
+    "52": "emote-wave",
+    "weird": "dance-weird",
+    "53": "dance-weird",
+    "wrong": "dance-wrong",
+    "54": "dance-wrong",
+    "yes": "emote-yes",
+    "55": "emote-yes",
+    "zero": "emote-astronaut",
+    "56": "emote-astronaut",
+    "penny": "dance-pennywise",
+    "57": "dance-pennywise",
+    "zombie": "emote-zombierun",
+    "58": "emote-zombierun",
+    "fight": "emote-swordfight",
+    "59": "emote-swordfight",
+    "sing": "idle_singing",
+    "60": "idle_singing",
+    "savage": "dance-tiktok8",
+    "61": "dance-tiktok8",
+    "donot": "dance-tiktok2",
+    "62": "dance-tiktok2",
+    "shuffle": "dance-tiktok10",
+    "63": "dance-tiktok10",
+    "viral": "dance-tiktok9",
+    "64": "dance-tiktok9",
+    "penguin": "dance-pinguin",
+    "65": "dance-pinguin",
+    "rock": "idle-guitar",
+    "66": "idle-guitar",
+    "star": "emote-stargazer",
+    "67": "emote-stargazer",
+    "boxer": "emote-boxer",
+    "68": "emote-boxer",
+    "creepy": "dance-creepypuppet",
+    "69": "dance-creepypuppet",
+    "anime": "dance-anime",
+    "70": "dance-anime",
+    "ruh": "emote-creepycute",
+    "71": "emote-creepycute",
+    "kafasiz": "emote-headblowup",
+    "72": "emote-headblowup",
+    "bashful": "emote-shy2",
+    "73": "emote-shy2",
+    "party": "emote-celebrate",
+    "74": "emote-celebrate",
+    "pose10": "emote-pose10",
+    "75": "emote-pose10",
+    "skate": "emote-iceskating",
+    "76": "emote-iceskating",
+    "wild": "idle-wild",
+    "77": "idle-wild",
+    "nervous": "idle-nervous",
+    "78": "idle-nervous",
+    "timejump": "emote-timejump",
+    "79": "emote-timejump",
+    "toilet": "idle-toilet",
+    "80": "idle-toilet",
+    "jingle": "dance-jinglebell",
+    "81": "dance-jinglebell",
+    "hyped": "emote-hyped",
+    "82": "emote-hyped",
+    "sleigh": "emote-sleigh",
+    "83": "emote-sleigh",
+    "pose6": "emote-pose6",
+    "84": "emote-pose6",
+    "jump": "emote-jumpb",
+    "85": "emote-jumpb",
+    "kawai": "dance-kawai",
+    "86": "dance-kawai",
+    "touch": "dance-touch",
+    "87": "dance-touch",
+    "repose": "sit-relaxed",
+    "88": "sit-relaxed",
+    "step": "emote-celebrationstep",
+    "89": "emote-celebrationstep"
 }
   if (message.toLowerCase() in emotes) {
 
@@ -153,23 +338,24 @@ bot.on('playerJoin', async (user) => {
   console.log(`[playerJoin]: ${user.username}(${user.id}) Hoşgeldin !`);
 
   if (user.username === 'Atekinz') {
-    bot.message.send("Yapımcım odaya katıldı ❤️ @Atekinz ")
+    bot.message.send("My daddy ❤️ @Atekinz ")
   }
   const randomMessage = await getRandomWelcomeMessage()
-  bot.message.send(randomMessage.replace('{{user}}', user.username))
-});
 
+  bot.message.send(randomMessage.replace('{{user}}', user.username))
+  });
 //playerjoin
+
 
 
 
 //deneme
 // Rastgele hoş geldin mesajlarının bulunduğu bir dizi
 const welcomeMessages = [
-  "Oww güneş gibi doğdun odaya",
-  "Hoayy maşallah",
-  "Bende diyorum oda neden canlandı",
-  "Merhabalar tanışabilir miyiz?"
+  "Oww welcome to HR School",
+  "hii welcome wtspp",
+  "You rose into the room like the sun",
+  "Hello, can we meet?"
 ];
 
 bot.on('playerJoin', (user) => {
@@ -186,7 +372,7 @@ bot.on('playerJoin', (user) => {
 // Emittd when a player leaves the room.
 bot.on('playerLeave', (user) => {
   console.log(`[playerLeave]: ${user.username}(${user.id}) Left the room`);
-  bot.message.send(`Görüşürüz @${user.username}!`)
+  bot.message.send(`Left @${user.username}!`)
 });
 
 // Emitted when a player moves or teleports in the game.
